@@ -14,6 +14,11 @@
    2. npm start
    3. 開啟前端給的連結
 
+有改的部分:
+後端:
+1. server.js(原為index.js)新增了app.use(cors...)
+2. 登入部分的後端有修改account.js的路徑(原本8000改成3000)
+
 目前解決的部分: 
 1. 登入串接沒問題
 2. txt2img的generate部分轉換成功 
@@ -22,7 +27,4 @@
 1. upload部分路徑好像跟以前不太一樣 無法將資料傳到資料庫裡
 2. img2img post至後端有點問題
 
-有改到的部分
-後端:
-1. server.js(原為index.js)新增了app.use(cors...)
-2. 登入部分的後端有修改account.js的路徑(原本8000改成3000)
+
