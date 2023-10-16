@@ -1,35 +1,23 @@
-1. cd src 
-2. npm i --lagacy-peer-deps
-3. npm run build
-4. cd ..
-5  npm i --lagacy-peer-deps
+# InstAI-test前後端串接測試
+1. 把前端後端的程式包在同一個資料夾裡
+2. 目前使用雙開的方式開啟前後端
 
-執行完畢後 打開MYSQL COMMAND LINE 創建DB及TABLE
- FOR LOGIN/REGISTER 以下指令
+   前端:
+   1. cd front
+   2. npm i --lagacy-peer-deps
+   3. npm run build
+   4. serve -s build
+   
+   後端:
+   1. npm i --lagacy-peer-deps
+   2. npm start
+   3. 開啟前端給的連結
 
-CREATE DATABASE test
-CREATE TABLE test.login(
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    firstname VARCHAR(255),
-    lastname VARCHAR(255),
-    email VARCHAR(255),
-    password VARCHAR(255),
-)
-CREATE TABLE test.photo(
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    file_name VARCHAR(255) NOT NULL,
-    image_data LONGBLOB NOT NULL
-);
-接下來回到terminal 
-隨後就可以打開專案 npm start 成功後會看到 Connected to MYSQL database
-打開以下網址: localhost:8081 
-
-
-
-
-
-
-製作Stable diffusion api interface -> TXT TO IMG / IMG TO IMG 
-1. SOLVE THE DESIGN OF PAGE -> CSS / ANTDESIGN / MATERIAL UI
-2. CONNECT THE API TO DELIVER PARAMETERS FROM SEVER 
-3. TEST / PUSH 
+目前解決的部分:
+1. 登入部分的後端有修改account.js的路徑(原本8000改成3000)
+2. 登入串接沒問題
+3. txt2img的generate部分轉換成功
+4. 
+目前遇到的問題:
+1. upload部分路徑好像跟以前不太一樣 無法將資料傳到資料庫裡
+2. img2img post至後端有點問題
