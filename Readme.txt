@@ -9,10 +9,27 @@
    3. npm run build
    4. serve -s build
    
-   後端:
+   後端(要另外開啟一個terminal):
    1. npm i --lagacy-peer-deps
+   執行完畢後 打開MYSQL COMMAND LINE 創建DB及TABLE
+   FOR LOGIN/REGISTER 以下指令
+   CREATE DATABASE test
+   CREATE TABLE test.login(
+       id INT AUTO_INCREMENT PRIMARY KEY,
+       firstname VARCHAR(255),
+       lastname VARCHAR(255),
+       email VARCHAR(255),
+       password VARCHAR(255),
+   )
+   CREATE TABLE test.photo(
+       id INT AUTO_INCREMENT PRIMARY KEY,
+       file_name VARCHAR(255) NOT NULL,
+       image_data LONGBLOB NOT NULL
+   );
+   (記得至..\src\database.js改名稱、密碼等等)
    2. npm start
    3. 開啟前端給的連結
+
 
 有改的部分:
 後端:
