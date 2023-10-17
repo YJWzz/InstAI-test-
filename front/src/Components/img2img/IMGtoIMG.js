@@ -94,7 +94,7 @@ function ImgPage() {
 
   async function jsonFunction(imgToImgData) {
     try {
-      await axios.post("https://localhost:8080/api/img2img/process", imgToImgData.request);
+      await axios.post("http://localhost:8080/api/img2img/process", imgToImgData.request);
       alert("轉換成功");
     } catch (error) {
       console.log("數據出錯:", error);
