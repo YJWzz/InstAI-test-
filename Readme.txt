@@ -32,16 +32,19 @@
 
 
 有改的部分:
+前端:
+1. IMGtoIMG.js的路徑原本是https改成http
 後端:
 1. server.js(原為index.js)新增了app.use(cors...)
 2. 登入部分的後端有修改account.js的路徑(原本8000改成3000)
 
 目前解決的部分: 
 1. 登入串接沒問題
-2. txt2img的generate部分能轉換成功 
+2. txt2img的generate部分能轉換成功
+3. img2img的generate部分能轉換成功
 
 目前遇到的問題:
 1. upload部分路徑好像跟以前不太一樣 無法將資料傳到資料庫裡
-2. img2img post至後端有點問題
+2. SD要提交的時候沒反應
 
 
